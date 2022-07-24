@@ -1,0 +1,7 @@
+.a{
+    text-align: center;
+}
+#main{
+    display:flex;
+    flex-direction: row;
+}

@@ -11,7 +11,7 @@
  container.style.height = "420px";
  container.style.flexWrap = "wrap";
  container.style.boxSizing = "border-box";
-
+ container.style.marginLeft = "350px";
  //container
  
  function gameZone(){
