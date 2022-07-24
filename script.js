@@ -7,7 +7,7 @@
  container.style.display = "flex";
  container.style.flexDirection = "column";
  container.style.width = "600px";
- container.style.height = "380px";
+ container.style.height = "420px";
  container.style.flexWrap = "wrap";
  container.style.boxSizing = "border-box";
 
