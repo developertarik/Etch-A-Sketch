@@ -18,7 +18,7 @@
   
     for (let i = 0; i <16; i++) {
     childRow = document.createElement("div");
-     childRow.classList.add("hover")                                  
+    childRow.classList.add("hover")                                  
 
     childRow.style.width = "30px";
     childRow.style.height = "20px";
@@ -27,12 +27,15 @@
     row.style.display = "flex";
     row.style.flexDirection = "row";
     row.style.flexWrap = "wrap";
+
     //rowu konteynere şutla
     container.appendChild(row);
     row.appendChild(childRow); 
     //childRow u row a şutla
     
-    childRow.addEventListener("mouseenter",()=>{
+    childRow.addEventListener("click",()=>{
+      childRow.classList.add("hover") 
+
       console.log("hovering");  
     })
   }
