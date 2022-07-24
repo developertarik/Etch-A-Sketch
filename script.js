@@ -18,7 +18,8 @@
   
     for (let i = 0; i <16; i++) {
     childRow = document.createElement("div");
-    childRow.classList.add("hover")                                  
+    childRow.classList.add("hover")    
+                                  
 
     childRow.style.width = "30px";
     childRow.style.height = "20px";
@@ -33,10 +34,8 @@
     row.appendChild(childRow); 
     //childRow u row a şutla
     
-    childRow.addEventListener("click",()=>{
-      childRow.classList.add("hover") 
-
-      console.log("hovering");  
+    childRow.addEventListener("mouseover",function(e){
+      e.target.style.backgroundColor = "black";
     })
   }
 
