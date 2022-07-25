@@ -41,14 +41,17 @@ let btn = document.querySelector("button");
   };
     
   }
-  btn.addEventListener("click",function(e){
-  container.removeChild(row);
-  });
+ 
 
 
 };
-
-
+function button32() {
+  btn.addEventListener("click",function(e){
+    container.removeChild(row);
+    
+    });
+}
+button32();
  //cells
 
 //cells function
