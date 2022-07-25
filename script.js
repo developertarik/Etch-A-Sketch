@@ -16,7 +16,7 @@ let btn = document.querySelector("button");
  //container
  
  function gameZone(){
-  
+  for(let j = 0; j<16; j++){
     for (let i = 0; i <16; i++) {
     childRow = document.createElement("div");
     childRow.classList.add("hover")    
@@ -37,12 +37,14 @@ let btn = document.querySelector("button");
     childRow.addEventListener("mouseover",function(e){
       e.target.style.backgroundColor = "black";
     })
+  };
     
   }
   btn.addEventListener("click",function(e){
     e.target.closest("div").remove();
-    
+    for (let j = 0; j<32; j++){
     for (let i = 0; i<32; i++){
+      container.removeChild(row);
       
       childRow = document.createElement("div");
       childRow.style.width = "15px";
@@ -56,8 +58,9 @@ let btn = document.querySelector("button");
         childRow.addEventListener("mouseover",function(e){
           e.target.style.backgroundColor = "black";
         })
+     }
     }
-  });
+   });
 }
 
 
@@ -66,9 +69,7 @@ let btn = document.querySelector("button");
  //cells
 
 //cells function
-  for (i = 0; i<16; i++){
     gameZone();
-  }
 
 
 
