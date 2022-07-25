@@ -39,25 +39,36 @@ let btn = document.querySelector("button");
     })
     
   }
-
+  btn.addEventListener("click",function(e){
+    e.target.closest("div").remove();
+    
+    for (let i = 0; i<32; i++){
+      
+      childRow = document.createElement("div");
+      childRow.style.width = "15px";
+      childRow.style.height = "10px";
+      childRow.style.border = "1.5px solid black";
+      row.style.display = "flex";
+        row.style.flexDirection = "row";
+        row.style.flexWrap = "wrap";
+        container.appendChild(row);
+        row.appendChild(childRow); 
+        childRow.addEventListener("mouseover",function(e){
+          e.target.style.backgroundColor = "black";
+        })
+    }
+  });
 }
-btn.addEventListener("click",open_32x32);
 
 
-function open_32x32(){
-  for (let i = 0; i<32; i++){
-  childRow = document.createElement("div");
-  childRow.style.width = "15px";
-  childRow.style.height = "10px";
-  childRow.style.border = "1.5px solid black";
-}}
+
 
  //cells
 
 //cells function
-for(i = 0; i<16; i++){
-  gameZone();
-}
+  for (i = 0; i<16; i++){
+    gameZone();
+  }
 
 
 
