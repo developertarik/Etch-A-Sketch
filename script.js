@@ -14,11 +14,12 @@ let btn = document.querySelector("button");
  container.style.boxSizing = "border-box";
  container.style.marginLeft = "350px";
  //container
- 
+ let board = 16;
  function gameZone(){
-  for(let j = 0; j<16; j++){
-    for (let i = 0; i <16; i++) {
+  for(let j = 0; j<board; j++){
+    for (let i = 0; i <board; i++) {
     childRow = document.createElement("div");
+    row.classList.add("row");
     childRow.classList.add("hover")    
                                   
 
@@ -41,29 +42,11 @@ let btn = document.querySelector("button");
     
   }
   btn.addEventListener("click",function(e){
-    e.target.closest("div").remove();
-    for (let j = 0; j<32; j++){
-    for (let i = 0; i<32; i++){
-      container.removeChild(row);
-      
-      childRow = document.createElement("div");
-      childRow.style.width = "15px";
-      childRow.style.height = "10px";
-      childRow.style.border = "1.5px solid black";
-      row.style.display = "flex";
-        row.style.flexDirection = "row";
-        row.style.flexWrap = "wrap";
-        container.appendChild(row);
-        row.appendChild(childRow); 
-        childRow.addEventListener("mouseover",function(e){
-          e.target.style.backgroundColor = "black";
-        })
-     }
-    }
-   });
-}
+  container.removeChild(row);
+  });
 
 
+};
 
 
  //cells
