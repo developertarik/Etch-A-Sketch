@@ -21,9 +21,9 @@
   
   function gameZone(){
     document.addEventListener("click",()=>{
-    container.removeChild(row);
       board = parseInt(prompt("how x ? "));
-            
+      container.innerHTML = "";
+
       
     gameZone();
     });
@@ -34,7 +34,7 @@
       box = document.createElement("div");
       
       row.style.height = "%100";
-      
+     
       box.style.width = 500 / board + "px";
       box.style.height = 500 /board + "px";
       box.style.border = "0.1px solid black";
