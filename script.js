@@ -16,12 +16,8 @@ let btn = document.querySelector("button");
  container.style.marginLeft = "150px";
  //container
  let board = 16;
- let newNumber;
- let select = document.addEventListener("click",()=>{
-   newNumber = prompt("how x?");
-   console.log(newNumber)
- })
- function gameZone(){
+ 
+ function gameZone(newNumber){
   for(let j = 0; j<board; j++){
     for (let i = 0; i <board; i++) {
     childRow = document.createElement("div");
@@ -51,7 +47,16 @@ let btn = document.querySelector("button");
 
 
 };
+function newBoard(){
+  let newNumber;
+ let select = document.addEventListener("click",()=>{
+   newNumber = parseInt(prompt("how x?"));
+   console.log(newNumber);
+   container.removeChild(row);
 
+ });
+}
+newBoard(); 
  //cells
 
 //cells function
