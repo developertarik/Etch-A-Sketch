@@ -2,42 +2,43 @@
  //row
  //rowun özelliklerini ayarla
  let row = document.createElement("div");
- let childRow = document.createElement("div");
+ let box = document.createElement("div");
  const container = document.querySelector("#container")
 //button
 let btn = document.querySelector("button");
  container.style.display = "flex";
- container.style.width = "600px";
- container.style.height = "400px";
- container.style.flex = "2 1 0;"
+ container.style.width = "500px";
+ container.style.height = "500px";
  container.style.flexDirection = "column";
  container.style.flexWrap = "wrap";
  container.style.boxSizing = "border-box";
  container.style.marginLeft = "150px";
+ row.style.display = "flex";
  //container
  let board = 16;
  
- function gameZone(newNumber){
+ function gameZone(){
   for(let j = 0; j<board; j++){
+    row = document.createElement("div");
     for (let i = 0; i <board; i++) {
-    childRow = document.createElement("div");
+    box = document.createElement("div");
     row.classList.add("row");
-    childRow.classList.add("hover")    
+    box.classList.add("hover")    
                                   
-
-    childRow.style.width = "30px";
-    childRow.style.height = "20px";
-    childRow.style.border = "3px solid black";
+    row.style.height = "%100";
+    box.style.width = "30px";
+    box.style.height = "20px";
+    box.style.border = "3px solid black";
     row.style.display = "flex";
     row.style.flexDirection = "row";
     row.style.flexWrap = "wrap";
 
     //rowu konteynere şutla
     container.appendChild(row);
-    row.appendChild(childRow); 
+    row.appendChild(box); 
     //childRow u row a şutla
     
-    childRow.addEventListener("mouseover",function(e){
+    box.addEventListener("mouseover",function(e){
       e.target.style.backgroundColor = "black";
     })
   };
@@ -47,29 +48,7 @@ let btn = document.querySelector("button");
 
 
 };
-function newBoard(){
-  let newNumber;
- let select = document.addEventListener("click",()=>{
-   newNumber = parseInt(prompt("how x?"));
-   console.log(newNumber);
-   container.removeChild(row);
-   for(let i = 0; i<newNumber; i++){
-     for(let j = 0; j<newNumber; j++){
-       let newRow = document.createElement("div");
-       let newChildRow =  document.createElement("div");
-      newChildRow.style.width = "15px";
-      newChildRow.style.height = "8px";
-    newChildRow.style.border = "3px solid black";
-    newRow.style.display = "flex";
-    newRow.style.flexDirection = "row";
-    newRow.style.flexWrap = "wrap";
-      container.appendChild(newChildRow);
-  }
-   }
 
- });
-}
-newBoard(); 
  //cells
 
 //cells function
@@ -78,7 +57,6 @@ newBoard();
 
 
  // bir div oluştur
-
 
 
 
