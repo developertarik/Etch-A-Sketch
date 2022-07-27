@@ -17,10 +17,18 @@
   container.style.marginLeft = "150px";
   row.style.display = "flex";
   //container
-  let board = 32;
+  let board = 16;
   
   function gameZone(){
-    for(let j = 0; j<board; j++){
+    document.addEventListener("click",()=>{
+    container.removeChild(row);
+      board = parseInt(prompt("how x ? "));
+            
+      
+    gameZone();
+    });
+   
+    for(let j = 0; j<board; j++){ 
       row = document.createElement("div");
       for (let i = 0; i <board; i++) {
       box = document.createElement("div");
@@ -29,11 +37,12 @@
       
       box.style.width = 500 / board + "px";
       box.style.height = 500 /board + "px";
-      box.style.border = "1px solid black";
+      box.style.border = "0.1px solid black";
       row.style.display = "flex";
       row.style.flexDirection = "row";
       row.style.flexWrap = "wrap";
-      row.style.boxSizing = "borderBox";
+      row.style.boxSizing = "border-box";
+      box.style.boxSizing = "border-box";
 
       //rowu konteynere şutla
       container.appendChild(row);
@@ -50,6 +59,8 @@
 
 
   };
+
+  
 
   //cells
 
