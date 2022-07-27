@@ -10,10 +10,10 @@
   container.style.display = "flex";
   container.style.flex ="1";
     container.style.width = "500px";
+    container.style.minWidth = "500px";
   container.style.height = "500px";
   container.style.flexDirection = "column";
   container.style.flexWrap = "wrap";
-
   container.style.marginLeft = "150px";
   row.style.display = "flex";
   //container
@@ -33,7 +33,6 @@
       for (let i = 0; i <board; i++) {
       box = document.createElement("div");
       
-      row.style.height = "%100";
      
       box.style.width = 500 / board + "px";
       box.style.height = 500 /board + "px";
