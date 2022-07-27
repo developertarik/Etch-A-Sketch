@@ -7,12 +7,11 @@
 //button
 let btn = document.querySelector("button");
  container.style.display = "flex";
+ container.style.flex = "2 1 0;"
  container.style.flexDirection = "column";
- container.style.width = "600px";
- container.style.height = "420px";
  container.style.flexWrap = "wrap";
  container.style.boxSizing = "border-box";
- container.style.marginLeft = "350px";
+ container.style.marginLeft = "150px";
  //container
  let board = 16;
  function gameZone(){
@@ -45,13 +44,7 @@ let btn = document.querySelector("button");
 
 
 };
-function button32() {
-  btn.addEventListener("click",function(e){
-    container.removeChild(row);
-    
-    });
-}
-button32();
+
  //cells
 
 //cells function
