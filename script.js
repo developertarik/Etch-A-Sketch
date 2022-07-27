@@ -53,6 +53,19 @@ function newBoard(){
    newNumber = parseInt(prompt("how x?"));
    console.log(newNumber);
    container.removeChild(row);
+   for(let i = 0; i<newNumber; i++){
+     for(let j = 0; j<newNumber; j++){
+       let newRow = document.createElement("div");
+       let newChildRow =  document.createElement("div");
+      newChildRow.style.width = "15px";
+      newChildRow.style.height = "8px";
+    newChildRow.style.border = "3px solid black";
+    newRow.style.display = "flex";
+    newRow.style.flexDirection = "row";
+    newRow.style.flexWrap = "wrap";
+      container.appendChild(newChildRow);
+  }
+   }
 
  });
 }
