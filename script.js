@@ -7,6 +7,8 @@
 //button
 let btn = document.querySelector("button");
  container.style.display = "flex";
+ container.style.width = "600px";
+ container.style.height = "400px";
  container.style.flex = "2 1 0;"
  container.style.flexDirection = "column";
  container.style.flexWrap = "wrap";
@@ -14,6 +16,11 @@ let btn = document.querySelector("button");
  container.style.marginLeft = "150px";
  //container
  let board = 16;
+ let newNumber;
+ let select = document.addEventListener("click",()=>{
+   newNumber = prompt("how x?");
+   console.log(newNumber)
+ })
  function gameZone(){
   for(let j = 0; j<board; j++){
     for (let i = 0; i <board; i++) {
