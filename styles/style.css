@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+
 .a{
     text-align: center;
 }
 #main{
     display:flex;
     flex-direction: row;
+}
+.btnb{
+  margin-right:500px;
+  border:none;
+  font-family:"Uchen",sans-serif;
+}
+body{
+  background-color:orange;
+    font-family:"Uchen",sans-serif;
+
 }
