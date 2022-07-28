@@ -22,9 +22,14 @@
   function gameZone(){
     document.addEventListener("click",()=>{
       board = parseInt(prompt("how x ? "));
-      container.innerHTML = "";
+      if(board<=100){
+        container.innerHTML = "";
+      }
+      else{
+        return;
+      }
 
-      
+        
     gameZone();
     });
    
