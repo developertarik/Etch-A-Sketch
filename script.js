@@ -20,7 +20,7 @@
   let board = 16;
   
   function gameZone(){
-    document.addEventListener("click",()=>{
+    btn.addEventListener("click",()=>{
       board = parseInt(prompt("how x ? "));
       if(board<=100){
         container.innerHTML = "";
