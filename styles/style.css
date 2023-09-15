@@ -1,19 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 .a{
     text-align: center;
 }
 #main{
     display:flex;
     flex-direction: row;
+    gap: 50px;
 }
 .btnb{
   margin-right:500px;
-  border:none;
-  font-family:"Uchen",sans-serif;
-}
+  width: 150px;
+  height: 50px;
+  font-family: 'Roboto Slab', serif;}
 body{
-  background-color:orange;
-    font-family:"Uchen",sans-serif;
-
+  background-color:burlywood;
+  font-family: 'Roboto Slab', serif;
+}
+.top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
